@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">нүүр</a></li>
+          <li><a href="/post">пост</a></li>
+        </ul>
+      </nav>
+    </header>
+    <% for(product of products) { %>
+    <div class="post">
+      <img src="<%=product.avatar%>" alt="" />
+      <h2><%=product.title%></h2>
+      <p><%=product.description%></p>
+      <p><%=product.price%></p>
+      <a href="/edit/ <%=product.id%>">fix</a>
+      <a href="/edit/delete <%=product.id%>">delete</a>
+    </div>
+    <%}%>
+  </body>
+</html>
